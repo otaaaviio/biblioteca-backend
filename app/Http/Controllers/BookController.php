@@ -16,15 +16,14 @@ class BookController extends Controller
                 'author' => 'required|max:255',
                 'rating' => 'required|numeric|between:1,5',
                 'review' => 'required',
-                'date_added' => 'required',
             ]);
+
 
             $livro = Book::create([
                 'title' => $request->input('title'),
                 'author' => $request->input('author'),
                 'rating' => $request->input('rating'),
                 'review' => $request->input('review'),
-                'date_added' => $request->input('date_added'),
             ]);
 
             return response()->json(['success' => 'Livro adicionado com sucesso!', 'livro' => $livro], 200);

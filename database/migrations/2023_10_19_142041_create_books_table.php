@@ -14,7 +14,6 @@ class CreateBooksTable extends Migration
             $table->string('author');
             $table->integer('rating');
             $table->text('review');
-            $table->date('date_added');
             $table->timestamps();
         });
     }
