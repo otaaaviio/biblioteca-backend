@@ -12,6 +12,10 @@ use App\Http\Controllers\BookController;
 | be assigned to the "web" middleware group. Make something great!
 */
 
+Route::get('/', function () {
+    return 'Hello, World!';
+});
+
 Route::post('/livros', [BookController::class, 'store']);
 
 Route::get('/livros', [BookController::class, 'index']);
